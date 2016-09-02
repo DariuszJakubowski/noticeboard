@@ -1,0 +1,11 @@
+{%extends'::base.html.twig' %}
+
+{% block body %}
+    {% for category in categories %}
+        <p>
+            {{ category.title }}
+        </p>
+    {% else %}
+        <p>No category found</p>
+    {%  endfor %}
+{% endblock %}

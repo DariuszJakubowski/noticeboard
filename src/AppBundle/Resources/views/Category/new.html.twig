@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="{{ path('app_category_create') }}" method="POST">
+        <p><label>Add category: <input type="text" name="name"></label></p>
+        <p><input type="submit" value="ok"></p>
+    </form>
+{% endblock %}
+

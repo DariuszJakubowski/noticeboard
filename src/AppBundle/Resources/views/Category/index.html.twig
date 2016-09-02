@@ -1,0 +1,11 @@
+{%extends'::base.html.twig' %}
+
+{% block body %}
+    {% for category in entities %}
+        <p>
+            {{ category }}
+        </p>
+    {% else %}
+        <p>No category found</p>
+    {%  endfor %}
+{% endblock %}

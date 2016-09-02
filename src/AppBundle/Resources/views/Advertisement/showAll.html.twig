@@ -1,0 +1,18 @@
+{%extends'::base.html.twig' %}
+
+{% block title %}AppBundle:Advertisement:showAll{% endblock %}
+
+
+{% block body %}
+    {% for advertisement in advertisements %}
+        <p>
+           <a href="{{ path('app_advertisement_show', {'id':advertisement.id}) }}" >{{ advertisement.title }}</a>
+            <span>({{ advertisement.category }})1</span>
+        </p>
+    {% else %}
+        <p>No category found</p>
+    {%  endfor %}
+{% endblock %}
+
+
+
